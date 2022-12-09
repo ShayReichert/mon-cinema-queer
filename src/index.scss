@@ -1,0 +1,174 @@
+// Couleurs
+$black: #181818;
+$white: #fff;
+$red: #e01313;
+$orange: #e08213;
+$yellow: #e0cc13;
+$green: #61e013;
+$blue: #13afe0;
+$purple: #9e13e0;
+
+// Fonts
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("./assets/fonts/Leifa-ExtraBold.woff2") format("woff2"), url("./assets/fonts/LexendDeca-SemiBold.woff") format("woff"),
+    url("./assets/fonts/LexendDeca-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("./assets/fonts/LexendDeca-Regular.woff2") format("woff2"), url("./assets/fonts/LexendDeca-Regular.woff") format("woff"),
+    url("./assets/fonts/LexendDeca-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Leifa";
+  src: url("./assets/fonts/Leifa-ExtraBold.woff2") format("woff2"), url("./assets/fonts/Leifa-ExtraBold.woff") format("woff"),
+    url("./assets/fonts/Leifa-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+$font-family-body: "Lexend Deca";
+$font-family-title: "Leifa";
+
+$transition-base: all 200ms ease;
+
+// Reset CSS
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Helpers
+
+@mixin screen-min() {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}

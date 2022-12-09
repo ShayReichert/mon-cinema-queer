@@ -1,0 +1,157 @@
+@import "./index.scss";
+
+body {
+  background-color: $black;
+  color: $white;
+  font-family: $font-family-body;
+}
+
+.main {
+  padding: 70px 40px;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: $font-family-title;
+  margin-bottom: 70px;
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+
+    @include screen-min() {
+      font-size: 64px;
+    }
+
+    .red {
+      color: $red;
+    }
+    .orange {
+      color: $orange;
+    }
+    .yellow {
+      color: $yellow;
+    }
+    .green {
+      color: $green;
+    }
+    .blue {
+      color: $blue;
+    }
+    .purple {
+      color: $purple;
+    }
+  }
+
+  .baseline {
+    margin-bottom: 30px;
+    font-size: 18px;
+
+    @include screen-min() {
+      font-size: 24px;
+    }
+  }
+
+  .second-baseline {
+    font-size: 14px;
+
+    @include screen-min() {
+      font-size: 16px;
+    }
+  }
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  margin: auto;
+
+  @include screen-min() {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1280px;
+  }
+
+  .card {
+    margin-bottom: 60px;
+
+    @include screen-min() {
+      flex: 0 0 30%;
+    }
+
+    &:hover {
+      img {
+        filter: blur(5px);
+      }
+
+      .image-overlay {
+        visibility: visible !important;
+
+        .content {
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    .image-wrapper {
+      position: relative;
+      margin-bottom: 10px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        border-radius: 25px;
+        transition: $transition-base;
+      }
+
+      .image-overlay {
+        background-color: rgba(167, 167, 167, 0.788);
+        position: absolute;
+        height: calc(100% - 34px * 2);
+        top: 0;
+        border-radius: 25px;
+        padding: 34px 20px;
+        font-size: 12px;
+        color: $black;
+        visibility: hidden;
+        transition: $transition-base;
+
+        .content {
+          opacity: 0;
+          transition: all 500ms ease;
+
+          strong {
+            font-size: 14px;
+            font-weight: bold;
+          }
+
+          .info {
+            margin-bottom: 20px;
+            line-height: 1.2;
+
+            &.age-limit {
+              color: #790808;
+            }
+          }
+        }
+      }
+    }
+
+    .movie-title {
+      font-family: $font-family-title;
+
+      h3 {
+        font-size: 24px;
+      }
+
+      .year {
+        font-size: 14px;
+      }
+    }
+  }
+}
