@@ -102,6 +102,7 @@ body {
       position: relative;
       margin-bottom: 10px;
       overflow: hidden;
+      border-radius: 24px;
 
       img {
         width: 100%;
@@ -131,7 +132,7 @@ body {
           }
 
           .info {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             line-height: 1.2;
 
             &.age-limit {
