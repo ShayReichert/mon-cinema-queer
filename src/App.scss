@@ -138,6 +138,10 @@ body {
           transition: all 500ms ease;
 
           @include screen-min() {
+            font-size: 13px;
+          }
+
+          @include screen-min(1280px) {
             font-size: 15px;
           }
 
@@ -146,6 +150,10 @@ body {
             font-weight: bold;
 
             @include screen-min() {
+              font-size: 15px;
+            }
+
+            @include screen-min(1280px) {
               font-size: 16px;
             }
           }

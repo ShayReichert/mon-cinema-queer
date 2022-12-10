@@ -167,8 +167,8 @@ table {
 
 // Helpers
 
-@mixin screen-min() {
-  @media screen and (min-width: 1024px) {
+@mixin screen-min($width: 1024px) {
+  @media screen and (min-width: $width) {
     @content;
   }
 }
