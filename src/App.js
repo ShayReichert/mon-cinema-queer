@@ -29,6 +29,10 @@ function App() {
     setMoviesDiscover(resMoviesDiscover.data.results);
   }
 
+  if (error) {
+    console.error(error);
+  }
+  
   return (
     moviesDiscover && (
       <div className="main">

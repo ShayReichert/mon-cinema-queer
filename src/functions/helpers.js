@@ -24,6 +24,9 @@ export const getCertifications = (movieReleaseDates) => {
 
 // Returns the text truncated according to the number of characters passed, but without cutting any words.
 export const maxTextLength = (text, maxLength) => {
+  if (text === null || text === undefined || text === '') {
+    console.log('pas de valeur')
+  };
   var pattern1 = "^(.{";
   var pattern2 = "}[^\\s]*).*";
   const pattern = new RegExp(pattern1 + maxLength + pattern2);
@@ -49,5 +52,5 @@ export function formatDate(dateString) {
   var monthName = monthNames[month];
 
   // Retourner la date formatée dans le nouveau format
-  return day + " " + monthName + "." + " " + year;
+  return `${day} ${monthName}. ${year}`;
 }
