@@ -100,7 +100,7 @@ export const codeLang = {
     nativeName: "ဗမာစာ",
   },
   ca: {
-    name: "Catalan; Valencian",
+    name: "Catalan (Valencian)",
     nativeName: "Català",
   },
   ch: {
@@ -112,7 +112,7 @@ export const codeLang = {
     nativeName: "нохчийн мотт",
   },
   ny: {
-    name: "Chichewa; Chewa; Nyanja",
+    name: "Chichewa, Chewa, Nyanja",
     nativeName: "chiCheŵa, chinyanja",
   },
   zh: {
@@ -148,7 +148,7 @@ export const codeLang = {
     nativeName: "dansk",
   },
   dv: {
-    name: "Divehi; Dhivehi; Maldivian;",
+    name: "Divehi, Dhivehi, Maldivian",
     nativeName: "ދިވެހި",
   },
   nl: {
@@ -188,7 +188,7 @@ export const codeLang = {
     nativeName: "français",
   },
   ff: {
-    name: "Fula; Fulah; Pulaar; Pular",
+    name: "Fula, Fulah, Pulaar, Pular",
     nativeName: "Fulfulde, Pulaar, Pular",
   },
   gl: {
@@ -216,7 +216,7 @@ export const codeLang = {
     nativeName: "ગુજરાતી",
   },
   ht: {
-    name: "Haitian; Haitian Creole",
+    name: "Haitian (Haitian Creole)",
     nativeName: "Kreyòl ayisyen",
   },
   ha: {
@@ -253,7 +253,7 @@ export const codeLang = {
   },
   ie: {
     name: "Interlingue",
-    nativeName: "Originally called Occidental; then Interlingue after WWII",
+    nativeName: "Originally called Occidental (then Interlingue after WWII)",
   },
   ga: {
     name: "Irish",
@@ -560,7 +560,7 @@ export const codeLang = {
     nativeName: "српски језик",
   },
   gd: {
-    name: "Scottish Gaelic; Gaelic",
+    name: "Scottish Gaelic (Gaelic)",
     nativeName: "Gàidhlig",
   },
   sn: {
@@ -588,7 +588,7 @@ export const codeLang = {
     nativeName: "Sesotho",
   },
   es: {
-    name: "Spanish; Castilian",
+    name: "Spanish (Castilian)",
     nativeName: "español, castellano",
   },
   su: {

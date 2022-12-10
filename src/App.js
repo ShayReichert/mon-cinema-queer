@@ -1,8 +1,20 @@
+import { useEffect, useState } from "react";
 import "./App.scss";
 import Card from "./components/Card";
-import { mockMoviesDiscover } from "./data/mockData";
+import { getMoviesDiscover } from "./functions/api";
+// import { mockMoviesDiscover } from "./data/mockData";
 
 function App() {
+  const [moviesDiscover, setMoviesDiscover] = useState([]);
+
+  useEffect(() => {
+    async function getData() {
+      const response = await getMoviesDiscover();
+      setMoviesDiscover(response.data.results);
+    }
+    getData();
+  }, []);
+
   return (
     <div className="main">
       <section className="title-wrapper">
@@ -19,7 +31,7 @@ function App() {
       </section>
 
       <section className="cards-wrapper">
-        {mockMoviesDiscover.map((movie, key) => {
+        {moviesDiscover.map((movie, key) => {
           return <Card info={movie} key={key} />;
         })}
       </section>
