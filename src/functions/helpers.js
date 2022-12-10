@@ -19,14 +19,16 @@ export const getCertifications = (movieReleaseDates) => {
   const certificationFR = releaseDatesFR[0]?.release_dates[0]?.certification;
   const certificationUS = releaseDatesUS[0]?.release_dates[0]?.certification;
 
+  if (certificationFR === "U") return;
+
   return certificationFR ? certificationFR : ageCertifications[certificationUS];
 };
 
 // Returns the text truncated according to the number of characters passed, but without cutting any words.
 export const maxTextLength = (text, maxLength) => {
-  if (text === null || text === undefined || text === '') {
-    console.log('pas de valeur')
-  };
+  if (text === null || text === undefined || text === "") {
+    console.log("pas de valeur");
+  }
   var pattern1 = "^(.{";
   var pattern2 = "}[^\\s]*).*";
   const pattern = new RegExp(pattern1 + maxLength + pattern2);
