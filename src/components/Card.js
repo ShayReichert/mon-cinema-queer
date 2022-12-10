@@ -1,7 +1,7 @@
-import { useEffect, useState, useMemo } from "react";
 // import { mockMovieCredits, mockMovieReleaseDates, mockMovieKeywords, mockMovieDetails } from "../data/mockData";
+import { useEffect, useState, useMemo } from "react";
 import { codeLang } from "../data/codeLang";
-import { getCertifications, maxTextLength } from "../functions/helpers";
+import { formatDate, getCertifications, maxTextLength } from "../functions/helpers";
 import { getMovieCredits, getMovieReleaseDates, getMovieKeywords, getMovieDetails } from "../functions/api";
 
 function Card({ info }) {
@@ -122,7 +122,7 @@ function Card({ info }) {
         </div>
         <div className="movie-title">
           {info.original_title && <h3>{info.original_title}</h3>}
-          {info.release_date && <div className="year">{info.release_date.match(/^\d{4}/)}</div>}
+          {info.release_date && <div className="year">{formatDate(info.release_date)}</div>}
         </div>
       </div>
     )

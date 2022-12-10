@@ -29,3 +29,25 @@ export const maxTextLength = (text, maxLength) => {
   const pattern = new RegExp(pattern1 + maxLength + pattern2);
   return text.replace(pattern, "$1");
 };
+
+export function formatDate(dateString) {
+  // Créer un nouvel objet Date à partir de la chaîne de caractères de la date
+  var date = new Date(dateString);
+
+  // Extraire les différentes parties de la date
+  var day = date.getDate();
+  var month = date.getMonth(); // Les mois vont de 0 à 11 dans les objets Date, il faut donc ajouter 1 pour obtenir les mois de 1 à 12
+  var year = date.getFullYear();
+
+  // Définir un tableau contenant les noms des mois
+  var monthNames = ["Jan", "Fév", "Mar", "Avr", "Mai", "Jun", "Jul", "Aoû", "Sep", "Oct", "Nov", "Déc"];
+
+  // Formater les parties de la date dans le nouveau format en ajoutant des zéros supplémentaires si nécessaire
+  day = day < 10 ? "0" + day : day;
+
+  // Récupérer le nom du mois à partir du tableau en fonction de l'index du mois (mois - 1)
+  var monthName = monthNames[month];
+
+  // Retourner la date formatée dans le nouveau format
+  return day + " " + monthName + "." + " " + year;
+}
