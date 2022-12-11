@@ -1,0 +1,27 @@
+@import "../../index.scss";
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+
+  .loader {
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+
+    /* Add a gradient to the border to create a color transition */
+    border-image: linear-gradient(to right, $red, $orange, $yellow, $green, $blue, $purple);
+    border-image-slice: 1;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

@@ -7,7 +7,7 @@ body {
 }
 
 .main {
-  padding: 70px 40px;
+  padding: 70px 40px 30px;
 }
 
 .title-wrapper {
@@ -77,112 +77,6 @@ body {
     max-width: 1200px;
   }
 
-  .card {
-    margin-bottom: 60px;
-    cursor: default;
-
-    @include screen-min() {
-      flex: 0 0 30%;
-      margin-bottom: 100px;
-    }
-
-    &:hover {
-      img {
-        filter: blur(5px);
-      }
-
-      .image-overlay {
-        visibility: visible !important;
-
-        .content {
-          opacity: 1 !important;
-        }
-      }
-    }
-
-    .image-wrapper {
-      position: relative;
-      margin-bottom: 10px;
-      overflow: hidden;
-      border-radius: 24px;
-
-      .image {
-        @include aspect-ratio(21, 32);
-
-        img {
-          width: 100%;
-          border-radius: 25px;
-          transition: $transition-base;
-          object-fit: cover;
-        }
-      }
-
-      .image-overlay {
-        $padding-vertical: 34px;
-        $padding-horizontal: 20px;
-
-        background-color: rgba(167, 167, 167, 0.788);
-        position: absolute;
-        width: calc(100% - #{$padding-horizontal} * 2);
-        height: calc(100% - #{$padding-vertical} * 2);
-        top: 0;
-        border-radius: 25px;
-        padding: $padding-vertical 20px;
-        font-size: 12px;
-        color: $black;
-        visibility: hidden;
-        transition: $transition-base;
-
-        .content {
-          opacity: 0;
-          transition: all 500ms ease;
-
-          @include screen-min() {
-            font-size: 13px;
-          }
-
-          @include screen-min(1280px) {
-            font-size: 15px;
-          }
-
-          strong {
-            font-size: 14px;
-            font-weight: bold;
-
-            @include screen-min() {
-              font-size: 15px;
-            }
-
-            @include screen-min(1280px) {
-              font-size: 16px;
-            }
-          }
-
-          .info {
-            margin-bottom: 15px;
-            line-height: 1.2;
-
-            &.age-limit {
-              color: #790808;
-            }
-          }
-        }
-      }
-    }
-
-    .movie-title {
-      font-family: $font-family-title;
-
-      h3 {
-        font-size: 24px;
-        margin-bottom: 5px;
-      }
-
-      .year {
-        font-size: 14px;
-      }
-    }
-  }
 }
 
 .pagination-wrapper {
@@ -249,6 +143,28 @@ body {
           left: 0;
           bottom: 0;
         }
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+
+  .made-by {
+    font-size: 12px;
+    color: #404040;
+    font-weight: normal;
+
+    a {
+      color: #797979;
+      text-decoration: none;
+      transition: $transition-base;
+
+      &:hover {
+        color: #8f8f8f;
       }
     }
   }

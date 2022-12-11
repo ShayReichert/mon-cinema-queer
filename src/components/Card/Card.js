@@ -1,8 +1,9 @@
 // import { mockMovieCredits, mockMovieReleaseDates, mockMovieKeywords, mockMovieDetails } from "../data/mockData";
 import { useEffect, useState, useMemo } from "react";
-import { codeLang } from "../data/codeLang";
-import { formatDate, getCertifications, maxTextLength } from "../functions/helpers";
-import { getMovieCredits, getMovieReleaseDates, getMovieKeywords, getMovieDetails } from "../functions/api";
+import "./Card.scss";
+import { codeLang } from "../../data/codeLang";
+import { formatDate, getCertifications, maxTextLength } from "../../functions/helpers";
+import { getMovieCredits, getMovieReleaseDates, getMovieKeywords, getMovieDetails } from "../../functions/api";
 
 function Card({ info }) {
   const [movieCredits, setMovieCredits] = useState([]);
