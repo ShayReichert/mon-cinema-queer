@@ -3,6 +3,7 @@
 .card {
   margin-bottom: 60px;
   cursor: default;
+  font-family: $font-family-body;
 
   @include screen-min() {
     flex: 0 0 30%;
