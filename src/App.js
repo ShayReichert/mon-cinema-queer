@@ -32,6 +32,7 @@ function App() {
     const page = e.selected + 1;
     const resMoviesDiscover = await getMoviesDiscover(page);
     setMoviesDiscover(resMoviesDiscover.data.results);
+    window.scrollTo({ top: 0 });
   }
 
   if (error) {
