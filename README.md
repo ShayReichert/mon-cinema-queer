@@ -26,7 +26,7 @@ git clone https://github.com/<YourUserName>/<PathToTheRepo>
 npm install
 ```
 ### - Get your Movie Database API key:
-```
+
 * Create an account : https://www.themoviedb.org/ 
 * Go to your profil and click on "API"
 * Create an file .env at the root of the project
