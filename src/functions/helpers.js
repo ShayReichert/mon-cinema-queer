@@ -41,7 +41,7 @@ export function formatDate(dateString) {
 
   // Extraire les différentes parties de la date
   var day = date.getDate();
-  var month = date.getMonth(); // Les mois vont de 0 à 11 dans les objets Date, il faut donc ajouter 1 pour obtenir les mois de 1 à 12
+  var month = date.getMonth();
   var year = date.getFullYear();
 
   // Définir un tableau contenant les noms des mois
@@ -53,6 +53,6 @@ export function formatDate(dateString) {
   // Récupérer le nom du mois à partir du tableau en fonction de l'index du mois (mois - 1)
   var monthName = monthNames[month];
 
-  // Retourner la date formatée dans le nouveau format
+  // Retourner la date dans le nouveau format
   return `${day} ${monthName}. ${year}`;
 }

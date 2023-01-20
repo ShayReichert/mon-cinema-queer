@@ -101,7 +101,7 @@ function Card({ info }) {
                 </div>
               )}
 
-              {getCertifications(movieReleaseDates) && <div className="info age-limit">- {getCertifications(movieReleaseDates)} ans</div>}
+              {getCertifications(movieReleaseDates) && <div className="info age-limit">{getCertifications(movieReleaseDates)}</div>}
 
               {tags && (
                 <div className="info tags">
