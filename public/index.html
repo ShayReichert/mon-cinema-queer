@@ -25,6 +25,18 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
+    <!--
+      Abla analytics script
+     -->
+    <script>
+      var script = document.createElement("script");
+      script.dataset.cache = true;
+      script.dataset.websiteId = "f9a2c70f-379f-4491-9909-638cbed94230";
+      script.src = "https://s.abla.io/abla.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    </script>
+
     <title>Mon Cinéma Queer</title>
   </head>
   <body>
