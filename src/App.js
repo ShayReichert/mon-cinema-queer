@@ -85,7 +85,7 @@ function App() {
       <section className="footer">
         <div className="made-by">
           Fait par{" "}
-          <a href="https://shayreichert.com/" target="_blank" rel="noreferrer">
+          <a href="https://www.youtube.com/channel/UCg_9adZCdtkq7Fxrg8xwL6g" target="_blank" rel="noreferrer">
             {" { Shay } "}
           </a>{" "}
           avec ❤️
