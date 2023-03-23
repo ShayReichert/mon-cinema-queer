@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
 import Card from "./components/Card/Card";
-import { getMoviesDiscoverWithCategories } from "./functions/api";
+import { getMoviesDiscover } from "./functions/api";
 import ReactPaginate from "react-paginate";
 import Loader from "./components/Loader/Loader";
 
@@ -17,7 +17,7 @@ function App() {
     async function getData(categories) {
       setIsLoading(true);
       try {
-        const resMoviesDiscover = await getMoviesDiscoverWithCategories(1, categories);
+        const resMoviesDiscover = await getMoviesDiscover(1, categories);
         setMoviesDiscover(resMoviesDiscover.data.results);
         setTotalResult(resMoviesDiscover.data.total_results);
         setIsLoading(false);
@@ -27,12 +27,12 @@ function App() {
       }
     }
     getData(categories);
-  }, []);
+  }, [categories]);
 
   async function fetchData(updatedCategories) {
     setIsLoading(true);
     try {
-      const resMoviesDiscover = await getMoviesDiscoverWithCategories(1, updatedCategories);
+      const resMoviesDiscover = await getMoviesDiscover(1, updatedCategories);
       setMoviesDiscover(resMoviesDiscover.data.results);
       setTotalResult(resMoviesDiscover.data.total_results);
       setIsLoading(false);
@@ -63,7 +63,7 @@ function App() {
 
   async function handlePageClick(e) {
     const page = e.selected + 1;
-    const resMoviesDiscover = await getMoviesDiscoverWithCategories(page, categories);
+    const resMoviesDiscover = await getMoviesDiscover(page, categories);
     setMoviesDiscover(resMoviesDiscover.data.results);
     window.scrollTo({ top: 0 });
   }

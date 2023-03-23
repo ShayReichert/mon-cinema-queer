@@ -17,8 +17,8 @@ function fetchMoviesData(query) {
     });
 }
 
-export function getMoviesDiscover(page) {
-  const keywords = "250606|158718|264384|264386|290527|3183";
+export function getMoviesDiscover(page, categories) {
+  const keywords = categories.join("|");
   const date = new Date().toISOString().split("T")[0];
   const query = `/discover/movie?api_key=${apiKey}&sort_by=release_date.desc&page=${page}&release_date.lte=${date}&with_keywords=${keywords}`;
 
@@ -45,14 +45,6 @@ export function getMovieKeywords(id) {
 
 export function getMovieDetails(id) {
   const query = `/movie/${id}?api_key=${apiKey}`;
-
-  return fetchMoviesData(query);
-}
-
-export function getMoviesDiscoverWithCategories(page, categories) {
-  const keywords = categories.join("|");
-  const date = new Date().toISOString().split("T")[0];
-  const query = `/discover/movie?api_key=${apiKey}&sort_by=release_date.desc&page=${page}&release_date.lte=${date}&with_keywords=${keywords}`;
 
   return fetchMoviesData(query);
 }
